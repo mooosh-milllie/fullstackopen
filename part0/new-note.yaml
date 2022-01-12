@@ -1,0 +1,27 @@
+title Form submission request and response
+
+Browser->Server: HTTP POST Request URL: https://studies.cs.helsinki.fi/exampleapp/new_note;
+Browser->Server: HTTP GET Request URL: https://studies.cs.helsinki.fi/exampleapp/notes
+Server-->Browser: notes
+Browser->Server: HTTP GET Request URL: https://studies.cs.helsinki.fi/exampleapp/main.css
+Server-->Browser: main.css
+
+Browser->Server: HTTP GET Request URL: https://studies.cs.helsinki.fi/exampleapp/main.js
+Server-->Browser: main.js
+
+
+note over Browser:
+Browser starts executing the main.js file
+that requests JSON data from server 
+end note
+
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Server->Browser: [{"content":"hello world","date":"2021-12-25T18:12:46.120Z"},...]
+
+note over Browser:
+Browser executes the event handler
+that renders notes to display
+end note
+
+Browser->Server: HTTP GET Request URL: https://studies.cs.helsinki.fi/favicon.ico
+Server-->Browser: favicon.ico

@@ -1,0 +1,12 @@
+title single page app form submission
+
+Browser->Server: HTTP GET Request https://studies.cs.helsinki.fi/exampleapp/main.css
+Server-->Browser: main.css
+Browser->Server: HTTP POST Request https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+Server-->Browser: {"message":"note created"}
+
+note over Server:
+The form submission was handled by javascript
+internally, the server only replied with a confirmation
+that the note has been created.
+end note

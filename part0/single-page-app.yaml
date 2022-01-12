@@ -1,0 +1,27 @@
+title single page app
+
+Browser->Server: HTTP GET Request https://studies.cs.helsinki.fi/exampleapp/spa
+Browser->Server: HTTP GET Request https://studies.cs.helsinki.fi/exampleapp/main.css
+Server-->Browser: main.css
+Browser->Server: HTTP GET Request https://studies.cs.helsinki.fi/exampleapp/main.css
+Server-->Browser: main.css
+
+Browser->Server: HTTP GET Request https://studies.cs.helsinki.fi/exampleapp/spa.js
+Server-->Browser: spa.js
+
+
+note over Browser:
+Browser starts executing the spa.js file
+that requests JSON data from server 
+end note
+
+Browser->Server: HTTP GET Request https://studies.cs.helsinki.fi/exampleapp/data.json
+Server->Browser: [{"content":"000","date":"2021-12-26T07:58:31.451Z"},...]
+
+note over Browser:
+Browser executes the event handler
+that renders notes to display
+end note
+
+Browser->Server: HTTP GET Request https://studies.cs.helsinki.fi/favicon.ico
+Server->Browser: text/html
